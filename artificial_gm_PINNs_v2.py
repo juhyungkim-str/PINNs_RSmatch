@@ -10,7 +10,7 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 
 
-dataset = 7 # 0 = full set, 1~8 = subset
+dataset = 6 # 0 = full set, 1~8 = subset
 
 in_gm_name = "Sa_" + str(dataset) + ".txt"
 in_g_eig_name = "g_" + str(dataset) + ".txt"
