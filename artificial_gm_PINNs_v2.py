@@ -1,5 +1,6 @@
 # PINNs based spectrum-matched earthquake motion generation
 # proposed by Ju-Hyung Kim (jhkk@khu.ac.kr)
+# 2024.7.18
 
 from PIL import Image
 
