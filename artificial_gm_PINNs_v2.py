@@ -10,7 +10,7 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 
 
-dataset = 6 # 0 = full set, 1~8 = subset
+dataset = 5 # 0 = full set, 1~8 = subset
 
 in_gm_name = "Sa_" + str(dataset) + ".txt"
 in_g_eig_name = "g_" + str(dataset) + ".txt"
@@ -120,6 +120,8 @@ t=np.arange(0, (len(g_eig_float[:,0]))/100, step=dt)
 
 # interest period range only
 int_period = range(37,73)
+int_period = range(0,111)
+
 Tn = sa_asce[int_period,0]
 ## target spectrum
 sat = sa_asce[int_period,1]
@@ -154,6 +156,7 @@ files = []
 
 # pick: 14 periods between 0.2 s to 1.5 s
 samp = [0, 7, 13, 19, 21, 24, 26, 28, 30, 31, 32, 33, 34, 35] # T=0.2:0.1:1.5
+samp = np.array([0, 7, 13, 19, 21, 24, 26, 28, 30, 31, 32, 33, 34, 35]) + 37 # T=0.2:0.1:1.5
 
 max_epoch = 40 # maximum iteration 
 
@@ -278,9 +281,9 @@ plt.figure()
 plt.plot(abs(outt_cum)/outt_cum[-1])
 
 # save data
-out_gm_name = "output\out40_gm_" + str(dataset) + ".txt"
-out_c_name = "output\out40_c_" + str(dataset) + ".txt"
-out_sa_name = "output\out40_sa_" + str(dataset) + ".txt"
+out_gm_name = "output\out111_gm_" + str(dataset) + ".txt"
+out_c_name = "output\out111_c_" + str(dataset) + ".txt"
+out_sa_name = "output\out111_sa_" + str(dataset) + ".txt"
 
 np.savetxt(out_gm_name,fit_gm)
 np.savetxt(out_c_name,opt_coefficient)

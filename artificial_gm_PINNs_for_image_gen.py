@@ -281,6 +281,12 @@ out_gm_name = "output\out_gm_" + str(dataset) + ".txt"
 out_c_name = "output\out_c_" + str(dataset) + ".txt"
 out_sa_name = "output\out_sa_" + str(dataset) + ".txt"
 
-# np.savetxt(out_gm_name,fit_gm)
-# np.savetxt(out_c_name,opt_coefficient)
-# np.savetxt(out_sa_name,fit_rs)
+out_c_hist_name = "output\out_c_hist_" + str(dataset) + ".txt"
+out_loss_name = "output\out_loss_" + str(dataset) + ".txt"
+
+np.savetxt(out_gm_name,fit_gm)
+np.savetxt(out_c_name,opt_coefficient)
+np.savetxt(out_sa_name,fit_rs)
+
+np.savetxt(out_c_hist_name,c_hist)
+np.savetxt(out_loss_name,loss_hist)

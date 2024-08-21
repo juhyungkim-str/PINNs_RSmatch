@@ -190,7 +190,7 @@ for i in range(10000):
             
 save_gif_PIL("nn.gif", files, fps=20, loop=0)
 
-opt_point = np.argmin(loss_hist[:,-1])
+opt_point = np.argmin(loss_hist[:,-1]) - 1
 
 opt_coefficient = c_hist[opt_point,:]
 
